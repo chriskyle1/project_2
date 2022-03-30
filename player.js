@@ -4,6 +4,11 @@ const infoDiv = document.getElementById('name')
 const heightDiv = document.getElementById('height')
 const weightDiv = document.getElementById('weight')
 const postDiv = document.getElementById('post')
+const threePts = document.getElementById('threePts')
+const shotPct = document.getElementById('shotpct')
+const gamePlayed = document.getElementById('gamesPlayed')
+const shotTot = document.getElementById('shottot')
+
 
 button.addEventListener('click', async () => {
     let idName = input.value
@@ -22,12 +27,20 @@ button.addEventListener('click', async () => {
 
     let averages = await axios.get(`https://www.balldontlie.io/api/v1/stats?player_ids[]=${playerId}`)
     console.log(averages)
+    let records = await axios.get(`https://www.balldontlie.io/api/v1/season_averages?player_ids[]=${playerId}`)
+    console.log(records)
 
     let threePointAvg = averages.data.data[0].fg3_pct
-    
+    let shootingAvg = averages.data.data[0].fg_pct
+    let gamesPlayed = records.data.data[0].games_played
+    let shotTotal = records.data.data[0].pts
 
     infoDiv.innerHTML = `<h1>${fName} ` + `${lName}</h1>`
     heightDiv.innerHTML = `Height: ${heightF} Feet ` + `${heightI} Inches`
     weightDiv.innerHTML = `Weight: ${weight} pounds`
     postDiv.innerHTML = `Position: ${position}<br>Team: ${team}`
+    threePts.innerHTML = `The current number of Three Pointers made this season is: ${threePointAvg}`
+    shotPct.innerHTML = `The current total shot percentage is: ${shootingAvg}%`
+    gamePlayed.innerHTML = `The current number of games played for this season is: ${gamesPlayed} games.`
+    shotTot.innerHTML = `The current total of shots for this player is: ${shotTotal} shots.`
 })
