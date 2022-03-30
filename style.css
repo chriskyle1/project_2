@@ -1,0 +1,20 @@
+/* a {
+    margin-right: auto;
+    margin-left: auto;
+} */
+
+h1{
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+a.center-text {
+    display: block;
+}
+
+
+
+
