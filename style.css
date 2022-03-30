@@ -1,20 +1,26 @@
-/* a {
-    margin-right: auto;
-    margin-left: auto;
-} */
 
 h1{
     text-align: center;
+    color:white;
 }
-
-.center-text {
+body{
     text-align: center;
+    background-color: white;
+    
 }
 
-a.center-text {
-    display: block;
+nav{
+   display: inline-block;
+   background-color: white;
+   padding-left: 45px;
+   padding-right: 45px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   width: 33.33%;  
 }
 
-
-
+body{
+    background-image: url('https://www.gannett-cdn.com/presto/2020/02/12/USAT/10579613-a1bc-459d-a03e-c75ff95b41ac-02082020MBB_USF-MS0023.jpg?crop=3891,2189,x0,y283&width=3200&height=1801&format=pjpg&auto=webp');
+    background-size: cover;
+}
 
