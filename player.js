@@ -39,8 +39,8 @@ button.addEventListener('click', async () => {
     heightDiv.innerHTML = `Height: ${heightF} Feet ` + `${heightI} Inches`
     weightDiv.innerHTML = `Weight: ${weight} pounds`
     postDiv.innerHTML = `Position: ${position}<br>Team: ${team}`
-    threePts.innerHTML = `The current number of Three Pointers made this season is: ${threePointAvg}`
-    shotPct.innerHTML = `The current total shot percentage is: ${shootingAvg}%`
-    gamePlayed.innerHTML = `The current number of games played for this season is: ${gamesPlayed} games.`
-    shotTot.innerHTML = `The current total of shots for this player is: ${shotTotal} shots.`
+    threePts.innerHTML = `The Current Number of Three Pointers made this Season is: ${threePointAvg}`
+    shotPct.innerHTML = `The Current Total Shot Percentage is: ${shootingAvg}%`
+    gamePlayed.innerHTML = `The Current N of games played for this Season is: ${gamesPlayed} games.`
+    shotTot.innerHTML = `The Current Total of Shots for this Player is: ${shotTotal} shots.`
 })
